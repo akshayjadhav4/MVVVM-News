@@ -7,15 +7,27 @@
     <fragment
         android:id="@+id/brakingNewsFragment"
         android:name="com.example.mvvvmnews.ui.fragment.BrakingNewsFragment"
-        android:label="BrakingNewsFragment" />
+        android:label="BrakingNewsFragment" >
+        <action
+            android:id="@+id/action_brakingNewsFragment_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchNewsFragment2"
         android:name="com.example.mvvvmnews.ui.fragment.SearchNewsFragment"
-        android:label="SearchNewsFragment" />
+        android:label="SearchNewsFragment" >
+        <action
+            android:id="@+id/action_searchNewsFragment2_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/savedNewsFragment2"
         android:name="com.example.mvvvmnews.ui.fragment.SavedNewsFragment"
-        android:label="SavedNewsFragment" />
+        android:label="SavedNewsFragment" >
+        <action
+            android:id="@+id/action_savedNewsFragment2_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/articalFragment"
         android:name="com.example.mvvvmnews.ui.fragment.ArticalFragment"
