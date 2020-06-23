@@ -5,8 +5,9 @@ import com.example.mvvvmnews.ui.models.Source
 
 class Converters {
 
+    //converting Source (article source) into string
     @TypeConverter
     fun fromSource(source: Source): String {
-
+        return source.name
     }
 }
