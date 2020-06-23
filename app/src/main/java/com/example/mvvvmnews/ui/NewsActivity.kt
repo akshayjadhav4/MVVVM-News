@@ -1,7 +1,8 @@
-package com.example.mvvvmnews
+package com.example.mvvvmnews.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mvvvmnews.R
 
 class NewsActivity : AppCompatActivity() {
 
