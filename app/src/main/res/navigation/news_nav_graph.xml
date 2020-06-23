@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/brakingNewsFragment">
+    <fragment
+        android:id="@+id/brakingNewsFragment"
+        android:name="com.example.mvvvmnews.ui.fragment.BrakingNewsFragment"
+        android:label="BrakingNewsFragment" />
+    <fragment
+        android:id="@+id/searchNewsFragment2"
+        android:name="com.example.mvvvmnews.ui.fragment.SearchNewsFragment"
+        android:label="SearchNewsFragment" />
+    <fragment
+        android:id="@+id/savedNewsFragment2"
+        android:name="com.example.mvvvmnews.ui.fragment.SavedNewsFragment"
+        android:label="SavedNewsFragment" />
+    <fragment
+        android:id="@+id/articalFragment"
+        android:name="com.example.mvvvmnews.ui.fragment.ArticalFragment"
+        android:label="ArticalFragment" />
+</navigation>
