@@ -33,7 +33,7 @@
         android:name="com.example.mvvvmnews.ui.ui.fragment.ArticalFragment"
         android:label="ArticleFragment" >
         <argument
-            android:name="Article"
+            android:name="article"
             app:argType="com.example.mvvvmnews.ui.models.Article" />
     </fragment>
 </navigation>
