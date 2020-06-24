@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvvmnews.R
 import com.example.mvvvmnews.ui.adapters.NewsAdapter
@@ -25,6 +26,14 @@ class BrakingNewsFragment : Fragment(R.layout.fragment_braking_news) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).viewModel
         setUpRecyclerView()
+
+        //to open webView
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article",it)
+            }
+            findNavController().navigate(R.id.action_breakingNewsFragment_to_articleFragment,bundle)
+        }
 
         viewModel.breakingNews.observe(viewLifecycleOwner, Observer { response ->
             when (response) {
