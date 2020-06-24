@@ -63,7 +63,7 @@ class NewsViewModel(
         newsRepository.upsert(article)
     }
 
-    fun getSaveNotes() = newsRepository.getSavedNews()
+    fun getSaveNews() = newsRepository.getSavedNews()
 
     fun deleteArticle(article: Article) = viewModelScope.launch {
         newsRepository.delete(article)
