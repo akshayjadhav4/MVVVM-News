@@ -2,11 +2,13 @@ package com.example.mvvvmnews.ui.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.mvvvmnews.R
 import com.example.mvvvmnews.ui.ui.NewsActivity
 import com.example.mvvvmnews.ui.ui.NewsViewModel
+import kotlinx.android.synthetic.main.fragment_artical.*
 
 class ArticalFragment : Fragment(R.layout.fragment_artical) {
     lateinit var viewModel: NewsViewModel
@@ -17,7 +19,10 @@ class ArticalFragment : Fragment(R.layout.fragment_artical) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).viewModel
 
-        val article = args.Article
-
+        val article = args.article
+        webView.apply {
+            webViewClient = WebViewClient()
+            loadUrl(article.url)
+        }
     }
 }
