@@ -3,6 +3,7 @@ package com.example.mvvvmnews.ui.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvvmnews.R
@@ -31,6 +32,10 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
             }
             findNavController().navigate(R.id.action_savedNewsFragment_to_articleFragment,bundle)
         }
+
+        viewModel.getSaveNews().observe(viewLifecycleOwner, Observer { articles ->
+            newsAdapter.differ.submitList(articles)
+        })
     }
 
     private fun setUpRecyclerView() {
